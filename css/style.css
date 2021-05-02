@@ -1,0 +1,285 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+.tracker-sec{
+    width: 100%;
+    padding: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo{
+    color: #ff002b;
+    display: inline-block;
+    font-size: 2em;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+header ul{
+    display: flex;
+}
+
+header li{
+    list-style: none;
+}
+
+header a{
+    display: inline-block;
+    color: #b2012d;
+    font-weight: 600;
+    font-size: 1.1em;
+    margin-left: 10px;
+    display: inline-block;
+    padding: 8px 18px;
+    text-decoration: none;
+    user-select: none;
+}
+
+
+
+header ul li a.active,
+header ul li a:hover{
+    background: #b2012d;
+    color: #fff;
+    border-radius: 30px;
+}
+
+.content{
+    margin-left: 50px;
+    
+}
+
+
+
+.textBox{
+    max-width: 1100px;
+}
+
+.textBox h2{
+    color: #b20101;
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    line-height: 1.2em;
+    font-weight: 700;
+}
+
+.textBox h3{
+    color: #cf0505;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    line-height: 1.2em;
+    font-weight: 400;
+}
+
+.img img{
+    width: 90%;
+    margin-left: 150px;
+}
+
+
+.find input{
+    width: 70%;
+    box-sizing: border-box;
+    border: 2px solid rgb(209, 0, 0);
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('../img/serch.png');
+    background-size: 25px;
+    background-position: 5px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    
+}
+
+.find a{
+    text-decoration: none;
+    color: #fff;
+    background-color: #cf032f;
+    padding: 15px 30px;
+    border-radius: 30px;
+    margin-left: 15px;
+    
+}
+
+.find a:hover{
+    color: rgb(223, 223, 223);
+    background-color: #bd1919;
+}
+
+.container{
+    max-width: 1282px;
+    margin: 0 auto;
+}
+
+.cities{
+    padding: 0;
+    flex-direction: column;
+}
+
+.opacity span{
+    font-weight: 300;
+    line-height: 1.25em;
+    color: #333;
+    display: block;
+    margin: 0;
+    font-size: 28px;
+    position: absolute;
+    z-index: 1;
+    bottom: 40%;
+}
+
+.opacity{
+    font-size: 160px;
+    position: relative;
+    color: rgba(0%, 0%, 0%, 0.16);
+    z-index: 3;
+    width: 100%;
+    opacity: 0.5;
+    top: 60px;
+}
+
+.city-title{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.city-list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    z-index: 4;
+}
+
+.city-list-block{
+    width: 100%;
+
+}
+
+
+
+.city-list li{
+    width: calc(20% - 36px);
+    list-style: none;
+    height: 256px;
+    background-size: cover;
+    margin: 10px 0;
+    background-position: center;
+    transition: 1s;
+}
+
+.city-list li:hover{
+    background-size: 150%;
+    background-position: center;
+    transform: scale(1.1);
+}
+
+
+
+.city-list li:nth-child(1){
+    background-image: url(../img/prague.jpg);
+}
+
+.city-list li:nth-child(2){
+    background-image: url(../img/brno.jpg);
+}
+
+.city-list li:nth-child(3){
+    background-image: url(../img/ostrava.jpg);
+}
+
+.city-list li:nth-child(4){
+    background-image: url(../img/olomouc.jpg);
+}
+
+.city-list li:nth-child(5){
+    background-image: url(../img/plzen.jpg);
+}
+
+.city-list li:nth-child(6){
+    background-image: url(../img/liberec.jpg);
+}
+
+.city-list li:nth-child(7){
+    background-image: url(../img/usti-nad-labem-new.jpg);
+}
+
+.city-list li:nth-child(8){
+    background-image: url(../img/pardubice.jpg);
+}
+
+.city-list li:nth-child(9){
+    background-image: url(../img/hradec-kralove.jpg);
+}
+
+.city-list li:nth-child(10){
+    background-image: url(../img/ceske-budejovice.jpg);
+}
+
+.city{
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+   
+}
+
+.city .city-name{
+    color: #fff;
+    font-size: 26px;
+    margin: 16px;
+    font-weight: 700;
+    line-height: 1em;
+}
+
+.city>.city-letter{
+    color: red;
+    font-weight: 900;
+    font-size: 10em;
+    z-index: 1000;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 300ms;
+}
+
+
+
+.city:hover>.city-letter{
+    opacity: 0.4;
+}
+
+
+.full-container{
+    color: #fff;
+}
+
+.home-section-apps-content{
+    color: #fff;
+    background: #DC1C22;
+    margin: 0px 0px 104px;
+    z-index: -5;
+    padding: 100px 0;
+}
+
+
